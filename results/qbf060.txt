@@ -1,0 +1,4 @@
+TENURE=20_FIRST_EXPERIMENT
+Best solution: Solution: cost=[-147.0], size=[13], elements=[28, 3, 17, 16, 11, 34, 40, 9, 30, 18, 48, 0, 1]
+Time: 0.49seg 
+
