@@ -8,8 +8,6 @@ import metaheuristics.tabusearch.AbstractTS;
 import problems.qbf.QBF_Inverse;
 import solutions.Solution;
 
-
-
 /**
  * Metaheuristic TS (Tabu Search) for obtaining an optimal solution to a QBF
  * (Quadractive Binary Function -- {@link #QuadracticBinaryFunction}).
@@ -20,7 +18,7 @@ import solutions.Solution;
  */
 public class TS_QBF extends AbstractTS<Integer> {
 	
-	private final Integer fake = -1;
+	public final Integer fake = -1;
 
 	/**
 	 * Constructor for the TS_QBF class. An inverse QBF objective function is
@@ -65,7 +63,6 @@ public class TS_QBF extends AbstractTS<Integer> {
 		ArrayList<Integer> _RCL = new ArrayList<Integer>();
 
 		return _RCL;
-
 	}
 	
 	/* (non-Javadoc)
@@ -80,7 +77,6 @@ public class TS_QBF extends AbstractTS<Integer> {
 		}
 
 		return _TS;
-
 	}
 
 	/* (non-Javadoc)
@@ -90,7 +86,6 @@ public class TS_QBF extends AbstractTS<Integer> {
 	public void updateCL() {
 
 		// do nothing
-
 	}
 
 	/**
@@ -183,15 +178,12 @@ public class TS_QBF extends AbstractTS<Integer> {
 	 * 
 	 */
 	public static void main(String[] args) throws IOException {
-
 		long startTime = System.currentTimeMillis();
-		TS_QBF tabusearch = new TS_QBF(20, 10000, "instances/qbf080");
+		TS_QBF tabusearch = new TS_QBF(20, 10000, "instances/qbf020");
 		Solution<Integer> bestSol = tabusearch.solve();
 		System.out.println("maxVal = " + bestSol);
 		long endTime   = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
-		System.out.println("Time = "+(double)totalTime/(double)1000+" seg");
-
+		System.out.println("Time = "+ (double) totalTime / (double) 1000 + " seconds");
 	}
-
 }
