@@ -13,16 +13,20 @@ public class TS_QBFPT_Executor {
     public static void main(String[] args) throws IOException {
 
         // Params
-        String[] instances = {"qbf020"};
+        String[] instances = {"qbf020", "qbf040", "qbf060", "qbf080", "qbf100", "qbf200", "qbf400"};
         Integer[] tenures = {20, 100};
-        Integer iterations = 10000000;
+        Integer iterations = 10000;
 
         // Experiments
         Experiment[] experiments = {
                 new Experiment("DEFAULT_FIRST", "first-improving", "default"),
         		new Experiment("DEFAULT_BEST", "best-improving", "default"),
-        		new Experiment("PROB_FIRST", "first-improving", "prob", 0.25),
-        		new Experiment("PROB_BEST", "best-improving", "prob", 0.25),
+        		new Experiment("PROB_25_FIRST", "first-improving", "prob", 0.25),
+        		new Experiment("PROB_25_BEST", "best-improving", "prob", 0.25),
+                new Experiment("PROB_50_FIRST", "first-improving", "prob", 0.50),
+                new Experiment("PROB_50_BEST", "best-improving", "prob", 0.50),
+                new Experiment("PROB_75_FIRST", "first-improving", "prob", 0.75),
+                new Experiment("PROB_75_BEST", "best-improving", "prob", 0.75),
                 new Experiment("DIV_100_FIRST", "first-improving", "diversification", 100),
                 new Experiment("DIV_100_BEST", "best-improving", "diversification", 100),
                 new Experiment("DIV_10_FIRST", "first-improving", "diversification", 10),
