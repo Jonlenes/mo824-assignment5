@@ -13,9 +13,9 @@ public class TS_QBFPT_Executor {
     public static void main(String[] args) throws IOException {
 
         // Params
-        String[] instances = {"qbf040"};
+        String[] instances = {"qbf020"};
         Integer[] tenures = {20, 100};
-        Integer iterations = 10000;
+        Integer iterations = 10000000;
 
         // Experiments
         Experiment[] experiments = {
