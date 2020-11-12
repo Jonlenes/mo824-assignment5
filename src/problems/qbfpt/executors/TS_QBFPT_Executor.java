@@ -8,18 +8,25 @@ import solutions.Solution;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class TS_QBFPT_PROB_Executor {
+public class TS_QBFPT_Executor {
 
     public static void main(String[] args) throws IOException {
 
         // Params
-        String[] instances = {"qbf020", "qbf040", "qbf060", "qbf080", "qbf100", "qbf200", "qbf400"};
+        String[] instances = {"qbf040"};
         Integer[] tenures = {20, 100};
         Integer iterations = 10000;
 
         // Experiments
         Experiment[] experiments = {
-                new Experiment("FIRST_EXPERIMENT"),
+                new Experiment("DEFAULT_FIRST", "first-improving", "default"),
+        		new Experiment("DEFAULT_BEST", "best-improving", "default"),
+        		new Experiment("PROB_FIRST", "first-improving", "prob", 0.25),
+        		new Experiment("PROB_BEST", "best-improving", "prob", 0.25),
+                new Experiment("DIV_100_FIRST", "first-improving", "diversification", 100),
+                new Experiment("DIV_100_BEST", "best-improving", "diversification", 100),
+                new Experiment("DIV_10_FIRST", "first-improving", "diversification", 10),
+                new Experiment("DIV_10_BEST", "best-improving", "diversification", 10),
         };
 
 
@@ -32,7 +39,7 @@ public class TS_QBFPT_PROB_Executor {
                         String expName = "TENURE=" + tenure + "_" + experiment.getKey();
                         System.out.println("\n\nINSTANCE:" + instance + "\tRUNNING EXPERIMENT: " + expName + "\n");
 
-                        TS_QBF tabuSearch = new TS_QBFPT_PROB(tenure, iterations, "instances/" + instance, "best-improving", 0.25);
+                        TS_QBF tabuSearch = experiment.getModel(tenure, iterations, "instances/" + instance);
                         executeInstance(expName, tabuSearch, fileWriter);
 
                     } catch (IOException e) {

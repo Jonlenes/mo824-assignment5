@@ -11,15 +11,12 @@ import java.util.List;
 public class TS_QBFPT extends TS_QBF {
 
     private final ForbiddenTriplesGenerator forbiddenTriplesGenerator = new ForbiddenTriplesGenerator(ObjFunction.getDomainSize());
-    public String localSearch;
-
-    public TS_QBFPT(Integer tenure, Integer iterations, String filename) throws IOException{
-        super(tenure, iterations, filename);
-    }
+    protected String localSearch;
 
     public TS_QBFPT(Integer tenure, Integer iterations, String filename, String localSearch) throws IOException{
-        this(tenure, iterations, filename);
+        super(tenure, iterations, filename);
         this.localSearch = localSearch;
+        
     }
 
     @Override
@@ -53,7 +50,7 @@ public class TS_QBFPT extends TS_QBF {
                     minDeltaCost = deltaCost;
                     bestCandIn = candIn;
                     bestCandOut = null;
-                    if (localSearch.equals("best-improving")){
+                    if (!localSearch.equals("best-improving")){
                         break;
                     }
                 }
@@ -67,7 +64,7 @@ public class TS_QBFPT extends TS_QBF {
                     minDeltaCost = deltaCost;
                     bestCandIn = null;
                     bestCandOut = candOut;
-                    if (localSearch.equals("best-improving")){
+                    if (!localSearch.equals("best-improving")){
                         break;
                     }
                 }
@@ -83,7 +80,7 @@ public class TS_QBFPT extends TS_QBF {
                         minDeltaCost = deltaCost;
                         bestCandIn = candIn;
                         bestCandOut = candOut;
-                        if (localSearch.equals("best-improving")){
+                        if (!localSearch.equals("best-improving")){
                             break EXIT;
                         }
                     }
