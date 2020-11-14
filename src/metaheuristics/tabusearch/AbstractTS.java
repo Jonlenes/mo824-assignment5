@@ -6,6 +6,8 @@ package metaheuristics.tabusearch;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import problems.Evaluator;
 import solutions.Solution;
@@ -213,7 +215,28 @@ public abstract class AbstractTS<E> {
 	 * @return The best feasible solution obtained throughout all iterations.
 	 */
 	public Solution<E> solve() {
-
+		/* Limitar o tempo em aproximadamente 30 min*/
+		Integer timeoutSeconds = 1800;
+		Timer timer = new Timer();
+		
+		class RemindTask extends TimerTask{
+			private Boolean timeout = false;
+			
+			public Boolean timeout() {
+				return this.timeout;
+			}
+			
+			public void run() {
+	            timer.cancel();
+	            timeout = true;
+	        }
+		};
+		
+		RemindTask task = new RemindTask();
+		// This function use milliseconds
+		timer.schedule(task, timeoutSeconds*1000);
+		
+		/* Execução */
 		incumbentSol = createEmptySol();
 		constructiveHeuristic();
 		TL = makeTL();
@@ -224,9 +247,16 @@ public abstract class AbstractTS<E> {
 				if (verbose)
 					System.out.println("(Iter. " + i + ") BestSol = " + incumbentSol);
 			}
+			
+			//Verifica se deu o timeout
+			if(task.timeout()) {
+				System.out.println("Timeout");
+				break;
+			}
 		}
 
 		return incumbentSol;
+		
 	}
 
 	/**
