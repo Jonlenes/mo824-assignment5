@@ -1,96 +1,96 @@
 TENURE=20_DEFAULT_FIRST
 Best solution: Solution: cost=[-553.0], size=[27], elements=[3, 44, 27, 51, 32, 4, 30, 41, 19, 59, 35, 56, 24, 26, 49, 38, 17, 29, 14, 53, 31, 42, 13, 54, 55, 2, 16]
-Time: 2.299seg 
+Time: 2.65seg 
 
 TENURE=20_DEFAULT_BEST
 Best solution: Solution: cost=[-560.0], size=[33], elements=[28, 3, 17, 16, 11, 34, 38, 26, 49, 44, 42, 51, 56, 4, 55, 19, 30, 27, 29, 35, 24, 53, 59, 14, 23, 12, 32, 31, 52, 18, 33, 2, 45]
-Time: 11.05seg 
+Time: 12.154seg 
 
 TENURE=20_PROB_0.25_FIRST
 Best solution: Solution: cost=[-505.0], size=[37], elements=[44, 21, 17, 28, 27, 16, 11, 38, 26, 3, 51, 45, 34, 5, 39, 55, 22, 4, 56, 2, 33, 19, 30, 32, 29, 54, 49, 41, 35, 24, 59, 23, 31, 53, 52, 8, 12]
-Time: 0.311seg 
+Time: 0.334seg 
 
 TENURE=20_PROB_0.25_BEST
 Best solution: Solution: cost=[-523.0], size=[26], elements=[13, 42, 44, 56, 21, 38, 43, 14, 54, 29, 27, 51, 17, 53, 4, 30, 46, 16, 55, 3, 35, 26, 24, 49, 59, 41]
-Time: 0.756seg 
+Time: 0.79seg 
 
 TENURE=20_PROB_0.5_FIRST
 Best solution: Solution: cost=[-517.0], size=[36], elements=[44, 18, 11, 45, 33, 16, 27, 24, 28, 17, 26, 38, 2, 19, 49, 4, 22, 23, 50, 51, 56, 34, 31, 40, 53, 52, 42, 29, 35, 41, 32, 30, 55, 59, 1, 12]
-Time: 0.353seg 
+Time: 0.428seg 
 
 TENURE=20_PROB_0.5_BEST
 Best solution: Solution: cost=[-532.0], size=[30], elements=[57, 30, 11, 49, 3, 24, 41, 19, 45, 4, 44, 23, 28, 17, 22, 21, 38, 26, 27, 51, 59, 8, 39, 6, 2, 55, 56, 35, 32, 53]
-Time: 2.073seg 
+Time: 2.06seg 
 
 TENURE=20_PROB_0.75_FIRST
 Best solution: Solution: cost=[-544.0], size=[31], elements=[13, 42, 44, 56, 21, 43, 38, 14, 23, 17, 29, 27, 51, 54, 53, 4, 52, 8, 35, 30, 32, 26, 31, 24, 50, 2, 59, 55, 45, 22, 5]
-Time: 0.492seg 
+Time: 0.566seg 
 
 TENURE=20_PROB_0.75_BEST
 Best solution: Solution: cost=[-544.0], size=[31], elements=[3, 28, 17, 16, 11, 34, 49, 26, 38, 44, 42, 21, 51, 56, 4, 55, 19, 30, 27, 29, 35, 41, 24, 53, 59, 14, 23, 12, 32, 31, 22]
-Time: 5.532seg 
+Time: 6.6seg 
 
 TENURE=20_DIV_100_FIRST
 Best solution: Solution: cost=[-480.0], size=[26], elements=[57, 3, 8, 21, 45, 39, 44, 5, 27, 54, 51, 32, 4, 30, 41, 6, 15, 19, 22, 28, 55, 59, 35, 23, 56, 2]
-Time: 0.338seg 
+Time: 0.635seg 
 
 TENURE=20_DIV_100_BEST
 Best solution: Solution: cost=[-560.0], size=[33], elements=[3, 28, 17, 16, 11, 34, 38, 26, 49, 44, 42, 51, 56, 4, 55, 19, 30, 27, 29, 35, 24, 53, 59, 14, 23, 12, 32, 31, 52, 18, 33, 2, 45]
-Time: 0.373seg 
+Time: 0.929seg 
 
 TENURE=20_DIV_10_FIRST
 Best solution: Solution: cost=[-480.0], size=[26], elements=[57, 3, 8, 21, 45, 39, 44, 5, 27, 54, 51, 32, 4, 30, 41, 6, 15, 19, 28, 22, 55, 59, 35, 23, 56, 2]
-Time: 0.26seg 
+Time: 0.495seg 
 
 TENURE=20_DIV_10_BEST
 Best solution: Solution: cost=[-538.0], size=[31], elements=[57, 3, 8, 21, 45, 39, 44, 27, 51, 32, 4, 30, 41, 6, 19, 28, 22, 55, 59, 35, 23, 56, 52, 17, 29, 53, 7, 26, 49, 24, 38]
-Time: 0.401seg 
+Time: 0.463seg 
 
 TENURE=100_DEFAULT_FIRST
 Best solution: Solution: cost=[-453.0], size=[27], elements=[44, 18, 11, 45, 33, 16, 27, 28, 3, 17, 5, 21, 30, 57, 8, 39, 9, 23, 52, 4, 19, 22, 15, 41, 6, 31, 32]
-Time: 9.245seg 
+Time: 9.477seg 
 
 TENURE=100_DEFAULT_BEST
 Best solution: Solution: cost=[-551.0], size=[31], elements=[57, 3, 8, 21, 45, 39, 44, 27, 51, 32, 4, 30, 41, 6, 19, 22, 28, 55, 59, 35, 23, 56, 17, 29, 53, 7, 26, 49, 24, 38, 2]
-Time: 8.844seg 
+Time: 8.309seg 
 
 TENURE=100_PROB_0.25_FIRST
 Best solution: Solution: cost=[-531.0], size=[32], elements=[28, 3, 17, 16, 11, 34, 49, 26, 38, 44, 42, 21, 51, 56, 4, 55, 19, 30, 27, 29, 35, 41, 24, 53, 59, 14, 23, 12, 32, 31, 52, 54]
-Time: 0.34seg 
+Time: 0.308seg 
 
 TENURE=100_PROB_0.25_BEST
 Best solution: Solution: cost=[-534.0], size=[31], elements=[3, 28, 17, 16, 11, 34, 38, 40, 26, 49, 44, 42, 21, 51, 56, 4, 55, 19, 30, 27, 29, 35, 24, 41, 53, 59, 14, 23, 12, 32, 31]
-Time: 0.723seg 
+Time: 0.762seg 
 
 TENURE=100_PROB_0.5_FIRST
 Best solution: Solution: cost=[-530.0], size=[32], elements=[28, 3, 17, 16, 11, 34, 38, 40, 26, 49, 44, 42, 51, 56, 4, 55, 19, 30, 27, 29, 35, 24, 41, 53, 59, 14, 23, 12, 32, 31, 52, 2]
-Time: 0.326seg 
+Time: 0.3seg 
 
 TENURE=100_PROB_0.5_BEST
 Best solution: Solution: cost=[-547.0], size=[32], elements=[28, 3, 17, 16, 11, 34, 49, 26, 38, 44, 42, 51, 56, 4, 55, 19, 30, 27, 29, 35, 24, 41, 53, 59, 14, 23, 12, 32, 31, 52, 18, 33]
-Time: 2.353seg 
+Time: 2.029seg 
 
 TENURE=100_PROB_0.75_FIRST
 Best solution: Solution: cost=[-515.0], size=[27], elements=[13, 42, 44, 56, 38, 43, 14, 54, 29, 27, 51, 17, 53, 4, 30, 46, 16, 55, 35, 59, 24, 3, 49, 26, 41, 19, 2]
-Time: 0.32seg 
+Time: 0.321seg 
 
 TENURE=100_PROB_0.75_BEST
 Best solution: Solution: cost=[-542.0], size=[26], elements=[13, 42, 44, 56, 38, 14, 54, 29, 27, 51, 17, 53, 4, 30, 55, 35, 59, 24, 3, 49, 26, 41, 19, 31, 32, 2]
-Time: 2.672seg 
+Time: 2.623seg 
 
 TENURE=100_DIV_100_FIRST
 Best solution: Solution: cost=[-546.0], size=[31], elements=[17, 16, 11, 49, 26, 38, 44, 42, 51, 56, 4, 55, 19, 30, 27, 29, 35, 41, 24, 53, 59, 14, 23, 12, 32, 31, 52, 18, 33, 2, 34]
-Time: 0.394seg 
+Time: 0.345seg 
 
 TENURE=100_DIV_100_BEST
 Best solution: Solution: cost=[-560.0], size=[33], elements=[3, 28, 17, 16, 11, 34, 49, 26, 38, 44, 42, 51, 56, 4, 55, 19, 30, 27, 29, 35, 24, 53, 59, 14, 23, 12, 32, 31, 52, 18, 33, 2, 45]
-Time: 0.391seg 
+Time: 0.35seg 
 
 TENURE=100_DIV_10_FIRST
 Best solution: Solution: cost=[-483.0], size=[32], elements=[57, 30, 11, 28, 17, 3, 26, 49, 44, 4, 38, 21, 41, 16, 19, 45, 34, 24, 22, 23, 56, 33, 2, 27, 31, 51, 29, 0, 18, 12, 32, 5]
-Time: 0.281seg 
+Time: 0.262seg 
 
 TENURE=100_DIV_10_BEST
 Best solution: Solution: cost=[-559.0], size=[28], elements=[13, 42, 44, 56, 38, 14, 54, 29, 27, 51, 17, 53, 4, 30, 16, 55, 35, 59, 24, 3, 49, 26, 41, 19, 32, 31, 2, 33]
-Time: 0.293seg 
+Time: 0.243seg 
 
