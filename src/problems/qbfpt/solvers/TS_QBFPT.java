@@ -10,22 +10,22 @@ import java.util.List;
 
 public class TS_QBFPT extends TS_QBF {
 
-    private final ForbiddenTriplesGenerator forbiddenTriplesGenerator = new ForbiddenTriplesGenerator(ObjFunction.getDomainSize());
+    private ForbiddenTriplesGenerator forbiddenTriplesGenerator;
     protected String localSearch;
 
     public TS_QBFPT(Integer tenure, Integer iterations, String filename, String localSearch) throws IOException{
         super(tenure, iterations, filename);
+        this.forbiddenTriplesGenerator = new ForbiddenTriplesGenerator(ObjFunction.getDomainSize());
         this.localSearch = localSearch;
-        
     }
 
     @Override
     public void updateCL(){
-        if (!this.incumbentSol.isEmpty()){
+        if (!this.currentSol.isEmpty()){
             List<Integer> forbiddenValues = new ArrayList<>();
-            Integer lastElement = this.incumbentSol.get(this.incumbentSol.size() - 1);
-            for (int i = 0; i < this.incumbentSol.size() - 1; i++){
-                forbiddenValues.addAll(forbiddenTriplesGenerator.getForbiddenValues(this.incumbentSol.get(i) + 1, lastElement + 1));
+            Integer lastElement = this.currentSol.get(this.currentSol.size() - 1);
+            for (int i = 0; i < this.currentSol.size() - 1; i++){
+                forbiddenValues.addAll(forbiddenTriplesGenerator.getForbiddenValues(this.currentSol.get(i) + 1, lastElement + 1));
             }
             for (Integer forbiddenValue : forbiddenValues){
                 int index = CL.indexOf(forbiddenValue - 1);
@@ -114,7 +114,7 @@ public class TS_QBFPT extends TS_QBF {
     public static void main(String[] args){
         try {
             long startTime = System.currentTimeMillis();
-            TS_QBFPT tabuSearch = new TS_QBFPT(20, 1000, "instances/qbf020", "best-improving");
+            TS_QBFPT tabuSearch = new TS_QBFPT(100, 100000, "instances/qbf040", "best-improving");
             Solution<Integer> bestSol = tabuSearch.solve();
             System.out.println(bestSol);
             System.out.println("Time = " + (double)(System.currentTimeMillis() - startTime) / (double) 1000 + " seconds");

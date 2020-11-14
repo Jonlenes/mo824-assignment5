@@ -119,7 +119,7 @@ public class TS_QBF extends AbstractTS<Integer> {
 		// Evaluate insertions
 		for (Integer candIn : CL) {
 			Double deltaCost = ObjFunction.evaluateInsertionCost(candIn, currentSol);
-			if (!TL.contains(candIn) || currentSol.cost+deltaCost < incumbentSol.cost) {
+			if (!TL.contains(candIn) || currentSol.cost + deltaCost < incumbentSol.cost) {
 				if (deltaCost < minDeltaCost) {
 					minDeltaCost = deltaCost;
 					bestCandIn = candIn;
@@ -130,7 +130,7 @@ public class TS_QBF extends AbstractTS<Integer> {
 		// Evaluate removals
 		for (Integer candOut : currentSol) {
 			Double deltaCost = ObjFunction.evaluateRemovalCost(candOut, currentSol);
-			if (!TL.contains(candOut) || currentSol.cost+deltaCost < incumbentSol.cost) {
+			if (!TL.contains(candOut) || currentSol.cost + deltaCost < incumbentSol.cost) {
 				if (deltaCost < minDeltaCost) {
 					minDeltaCost = deltaCost;
 					bestCandIn = null;
@@ -142,7 +142,7 @@ public class TS_QBF extends AbstractTS<Integer> {
 		for (Integer candIn : CL) {
 			for (Integer candOut : currentSol) {
 				Double deltaCost = ObjFunction.evaluateExchangeCost(candIn, candOut, currentSol);
-				if ((!TL.contains(candIn) && !TL.contains(candOut)) || currentSol.cost+deltaCost < incumbentSol.cost) {
+				if ((!TL.contains(candIn) && !TL.contains(candOut)) || currentSol.cost + deltaCost < incumbentSol.cost) {
 					if (deltaCost < minDeltaCost) {
 						minDeltaCost = deltaCost;
 						bestCandIn = candIn;

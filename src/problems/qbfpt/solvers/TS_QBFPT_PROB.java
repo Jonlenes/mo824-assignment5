@@ -114,7 +114,7 @@ public class TS_QBFPT_PROB extends TS_QBFPT {
     public static void main(String[] args){
         try {
             long startTime = System.currentTimeMillis();
-            TS_QBFPT tabuSearch = new TS_QBFPT_PROB(100, 1000, "instances/qbf020", "best-improving", 0.25);
+            TS_QBFPT tabuSearch = new TS_QBFPT_PROB(20, 1000000, "instances/qbf040", "best-improving", 0.50);
             Solution<Integer> bestSol = tabuSearch.solve();
             System.out.println(bestSol);
             System.out.println("Time = " + (double)(System.currentTimeMillis() - startTime) / (double) 1000 + " seconds");
